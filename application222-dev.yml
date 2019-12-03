@@ -1,0 +1,19 @@
+server:
+  port: 8001
+spring:
+  datasource:
+    username: james
+    password: 1234
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql:///je1907_orders?useUnicode=true&characterEncoding=utf8
+    type: com.alibaba.druid.pool.DruidDataSource
+
+  application:
+    name: sc03provider
+
+eureka: #注册中心的地址
+  instance:
+    prefer-ip-address: true   #在 eureka 后台中访问当前项目的时候使用ip 地址访问,默认是机器名的方式
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:10000/eureka
